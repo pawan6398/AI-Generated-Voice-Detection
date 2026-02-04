@@ -11,7 +11,7 @@ import io
 import json
 
 # Configuration
-API_URL = "http://localhost:8000"
+API_URL = "https://ai-generated-voice-detection-0ra8.onrender.com"
 API_KEY = "dev-api-key-12345"
 
 def create_test_audio(duration=2.0, sample_rate=16000, frequency=440):
