@@ -91,7 +91,7 @@ class FeatureExtractor:
             else:
                 feature_vector.append(value)
         
-        return np.array(feature_vector)
+        return np.array(feature_vector)[:100]
     
     def get_feature_names(self) -> list:
         """Return list of feature names for reference"""
