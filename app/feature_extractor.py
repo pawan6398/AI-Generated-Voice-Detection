@@ -91,7 +91,15 @@ class FeatureExtractor:
             else:
                 feature_vector.append(value)
         
-        return np.array(feature_vector)[:100]
+        #return np.array(feature_vector)[:100]
+        # Feature vector ko exactly 100 dimensions ka banayein
+        final_vector = np.array(feature_vector)
+        if len(final_vector) > 100:
+            final_vector = final_vector[:100]
+        elif len(final_vector) < 100:
+            final_vector = np.pad(final_vector, (0, 100 - len(final_vector)), 'constant')
+            
+        return final_vector
     
     def get_feature_names(self) -> list:
         """Return list of feature names for reference"""
