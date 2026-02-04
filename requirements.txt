@@ -5,6 +5,9 @@ pydantic-settings==2.1.0
 librosa==0.10.1
 soundfile==0.12.1
 numpy==1.26.4
+git add .
+git commit -m "Update Python version and relax sklearn requirement"
+git push origin main
 scikit-learn>=1.5.0
 xgboost==2.0.3
 python-multipart==0.0.6
